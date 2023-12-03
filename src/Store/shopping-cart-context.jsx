@@ -7,7 +7,7 @@ export const CartContext = createContext({
   updateItemQuantity: () => {},
 });
 
-function shoppingCartReducer(state, action) {
+export function shoppingCartReducer(state, action) {
   if (action.type === "ADD_ITEM_TO_CART") {
     const updatedItems = [...state.items];
     const existingCartItemIndex = updatedItems.findIndex(
